@@ -8,7 +8,7 @@
 
 <body>
 	<!-- the entire body must be written by student -->
-	<form action="">
+	<form action="/action_page.php" method="get" target="_blank">
 		<div>
             <label for="name">Name*</label><br>
             <input type="text" name="name" id="name" placeholder="Name" required>
@@ -19,13 +19,13 @@
         </div>
 		<div>
 			<label for="gender">Gender*</label><br>
-			<input type="radio"  value="male" name="gender" required>Male<br>
-			<input type="radio" value="female" name="gender" required>Female<br>
+			<input type="radio" id="gender_m" value="male" name="gender" required>Male<br>
+			<input type="radio" id="gender_f" value="female" name="gender" required>Female<br>
 		</div>
 		<div>
 			<label for="cars">Car Brands*</label><br>
             <select name="car" id="cars">
-            <option value="" disabled selected>Please choose an option</option>
+            <option value="" disabled selected>--Please choose an option--</option>
             <option value="saab">Tata</option>
             <option value="opel">Mahindra</option>
             <option value="audi">Maruti Suzuki</option>
@@ -33,18 +33,27 @@
 		</div>
         <div>
             <label for="age">Age*</label><br>
-            <input type="number" id="number" min="5" max="100" required>
+            <input type="age" id="age" min="5" max="100" placeholder="Age" required>
         </div>
         <div>
             <label for="extra-input">DOB*</label><br>
-            <input type="date" required>
+            <input type="date" id="dob" required>
         </div>
+		<div>
+			<label for="tel">Phone Number</label><br>
+			<input type="tel" id="tel" placeholder="xxx-xxx-xxxx" required>
+		</div>
         <div>
             <label for="password">Password*</label><br>
-            <input type="password" required>
+            <input type="password" id="password" placeholder="Password" required>
         </div>
+		<div>
+			<label for="checkbox">I agree to the TOS</label>
+			<input type="checkbox" id="tos" required>
+		</div>
         <div>
-            <button type="submit" class="registerbtn"><a href="#"></a>Register</button>
+			<button type="submit" value="Submit">Submit</button>
+<!--             <button type="submit" class="registerbtn"><a href="#"></a>Register</button> -->
         </div>
 	</form>
     <script type="text/javascript" src="./script.js">
